@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+.wrap {
+	max-width: 900px;
+	padding: 0 30px;
+	margin: 40px auto;
+}
+
+nav {
+	max-width: 980px;
+	padding: 0 30px;
+	margin: 20px auto 0;
+}
+
+nav li {
+	display: inline-block;
+	list-style-type: none;
+	font-size: 14px;
+}
+
+nav li a {
+	background-color: purple;
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 10px;
+	margin: 0 20px 0 0;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+nav li:hover,
+nav li a:hover {
+	background-color: #fff;
+	color: purple;
+	text-decoration: none;
+}
+
+h1 {
+	color: purple;
+}

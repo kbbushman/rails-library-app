@@ -10,25 +10,34 @@
 
   <body>
 
-  	<!-- Start User Action Buttons -->
-		<ul>
-	    <% if current_user %>
-	      <li><%= link_to "Profile", user_path(current_user) %></li>
-	      <li><%= link_to "Log Out", logout_path %></li>
-	    <% else %>
-	      <li><%= link_to "Create Account", new_user_path %></li>
-	      <li><%= link_to "Log In", login_path %></li>
-	    <% end %>
-	  </ul>
+  	<!-- Start Nav -->
+  	<nav>
+			<ul>
+		    <% if current_user %>
+		      <li><%= link_to "Profile", user_path(current_user) %></li>
+		      <li><%= link_to "Libraries", libraries_path %></li>
+		      <li><%= link_to "Add New Library", new_library_path %></li>
+		      <li><%= link_to "Log Out", logout_path %></li>
+		    <% else %>
+		      <li><%= link_to "Create Account", new_user_path %></li>
+		      <li><%= link_to "Log In", login_path %></li>
+		    <% end %>
+		  </ul>
+	  </nav><!-- End Nav -->
 
-	  <!-- Start Flash Message -->
-	  <% flash.each do |name, msg| %>
-		  <p>
-		    <small> <%= name.capitalize %>: <%= msg %> </small>
-		  </p>
-		<% end %>
+  	<!-- Start Wrap -->
+	  <div class="wrap">
 
-    <%= yield %>
-    
+		  <!-- Start Flash Message -->
+		  <% flash.each do |name, msg| %>
+			  <p>
+			    <small> <%= name.capitalize %>: <%= msg %> </small>
+			  </p>
+			<% end %><!-- End Flash Message -->
+
+	    <%= yield %>
+
+    </div><!-- End Wrap -->
+
   </body>
 </html>

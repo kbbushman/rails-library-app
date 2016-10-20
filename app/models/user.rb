@@ -1,5 +1,8 @@
 class User < ApplicationRecord
 
+	has_many :library_users, dependent: :destroy
+  has_many :libraries, through: :library_users
+
 	has_secure_password
 
 	def self.confirm(params)

@@ -1,0 +1,9 @@
+<h1><%= @library.name %></h1>
+
+<p>Name: <%= @library.name %></p>
+
+<p>Floor Count: <%= @library.floor_count %></p>
+
+<p>Floor Area: <%= @library.floor_area %></p>
+
+<%= button_to "Join", library_users_path(@library) %>
