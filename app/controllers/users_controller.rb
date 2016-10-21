@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find_by_id(params[:id])
 		@currentuser = current_user
+		# must be who you say you are to see user show view
 		redirect_to user_path(@currentuser) unless @user[:id] == @currentuser[:id]
 	end
 

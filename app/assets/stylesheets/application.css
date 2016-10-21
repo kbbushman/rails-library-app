@@ -50,6 +50,31 @@ nav li a:hover {
 	text-decoration: none;
 }
 
+.my-libraries-button {
+	display: block;
+	width: 90px;
+	background-color: purple;
+	font-size: 13px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 10px;
+	margin: 10px 0 0;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.my-libraries-button:hover {
+	background-color: #fff;
+	color: purple;
+	text-decoration: none;
+}
+
 h1 {
 	color: purple;
+}
+
+h3 {
+	margin: 0 0 5px;
 }
