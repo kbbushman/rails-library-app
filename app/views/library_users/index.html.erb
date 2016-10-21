@@ -4,6 +4,6 @@
 
 <ul>
   <% @libraries.each do |lib| %>   
-    <li><%= lib.name %></li>
+    <li><%= link_to lib.name, library_path(lib) %></li>
   <% end %>
 </ul>
