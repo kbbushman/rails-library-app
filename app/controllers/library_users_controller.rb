@@ -1,5 +1,7 @@
 class LibraryUsersController < ApplicationController
 
+	before_action :logged_in?
+
 	def index
 		@user = User.find(params[:user_id])
 		@libraries = @user.libraries

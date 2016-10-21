@@ -5,6 +5,12 @@ module SessionsHelper
     @current_user = user
   end
 
+  def logged_in?
+    if current_user == nil
+      redirect_to login_path
+    end
+  end
+
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
   end

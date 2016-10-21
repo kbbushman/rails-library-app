@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+	before_action :logged_in?, only: [:show]
+
 	def index
 		@users = User.all
 	end
@@ -16,6 +18,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_id(params[:id])
+		@currentuser = current_user
+		redirect_to user_path(@currentuser) unless @user[:id] == @currentuser[:id]
 	end
 
 	private
